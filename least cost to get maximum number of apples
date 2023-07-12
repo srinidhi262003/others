@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int max,q1,c1,q2,c2,i,m=0,cost=35345,n;
+    printf("enter the maximum number of apples:");
+    scanf("%d",&max);
+    printf("enter q1:");
+    scanf("%d",&q1);
+    printf("enter q2:");
+    scanf("%d",&q2);
+    printf("enter c1:");
+    scanf("%d",&c1);
+    printf("enter c2:");
+    scanf("%d",&c2);
+    for(i=1;i<max/q1;i++)
+    {
+        m=m+q1;
+        if((max-m)%q2==0)
+        {
+            n=(max-m)/q2;
+            if((i*c1+n*c2)<cost)
+            {
+                cost=(i*c1+n*c2);
+            }
+        }
+    }
+    printf("%d",cost);
+    
+}
