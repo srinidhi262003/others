@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    float n;
+    int a[100];
+    printf("enter the number of elements:");
+    scanf("%f",&n);
+    for(int i=0;i<n;i++)
+    {
+        printf("enter the number:");
+        scanf("%d",&a[i]);
+    }
+    float count1=0;
+    float count2=0;
+    float count3=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>0)
+        count1++;
+        if(a[i]<0)
+        count2++;
+        if(a[i]==0)
+        count3++;
+    }
+    printf("%.6f\n",count1/n);
+    printf("%.6f\n",count2/n);
+    printf("%.6f\n",count3/n);
+}
