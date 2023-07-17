@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("enter the number:");
+    scanf("%d",&n);
+    int a[100][100];
+    int k=n;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(i==j&&i<=n/2)
+            {
+                a[i][j]=k;
+                a[n-1-i][n-1-j]=k;
+                k--;
+            }
+            
+        }
+    }
+    int l=0;
+    int m=n-1;
+    int v=1;
+    while(l<=n/2 && m>=n/2)
+    {
+        a[l][m]=v;
+        a[m][l]=v;
+        v++;
+        l++;
+        m--;
+    }
+     for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
