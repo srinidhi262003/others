@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() 
+{
+    int bn,sn;
+    printf("enter big number:");
+    scanf("%d",&bn);
+    printf("enter small number:");
+    scanf("%d",&sn);
+    int q=bn/sn;
+    printf("%d",bn-q*sn);
+}
