@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() 
+{
+    // Write C code here
+    char str[200];
+    printf("enter string:");
+    scanf("%s",&str);
+    printf(str);
+    
+    int i=0,strlen=0;
+    while(str[i]!='\0')
+    {
+        strlen++;
+        i++;
+    }
+    printf("\n%d\n",strlen);
+    for(int i=strlen-1;i>=0;i--)
+    {
+        if(str[i]=='.')
+        {
+            int j=i+1;
+            while(str[j]!='\0' && str[j]!='.')
+            {
+                printf("%c",str[j]);
+                j++;
+            }
+            printf(".");
+        }
+    }
+    int k=0;
+    while(str[k]!='.')
+    {
+        printf("%c",str[k]);
+        k++;
+    }
+}
