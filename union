@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() 
+{
+    int m,n;
+    printf("enter no.of elements in a:");
+    scanf("%d",&m);
+    printf("enter no.of elements in b:");
+    scanf("%d",&n);
+    int a[m];
+    int b[n];
+    for(int i=0;i<m;i++)
+    {
+        printf("enter element:");
+        scanf("%d",&a[i]);
+    }
+     for(int i=0;i<n;i++)
+    {
+        printf("enter element:");
+        scanf("%d",&b[i]);
+    }
+    int c[m+n];
+    int k=0;
+    for(int i=0;i<m;i++)
+    {
+        c[k]=a[i];
+        k++;
+    }
+    int y=k;
+    for(int i=0;i<n;i++)
+    {
+        int flag=0;
+        for(int u=0;u<k;u++)
+        {
+            if(b[i]==c[u])
+            flag++;
+        }
+        if(flag==0)
+        {
+            c[y]=b[i];
+            y++;
+        }
+    }
+    for(int h=0;h<y;h++)
+    {
+        printf("%d\n",c[h]);
+    }
+}
