@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n1,n2,dup,r,f,count;
+    printf("enter n1:");
+    scanf("%d",&n1);
+    printf("enter n2:");
+    scanf("%d",&n2);
+    for(int i=n1;i<n2;i++)
+    {
+        dup=i;
+        count=0;
+        f=0;
+        while(dup>0)
+        {
+            count++;
+            r=dup%10;
+            dup=dup/10;
+            if(dup!=0)
+            if((dup%10)+1==r||(dup%10)-1==r)
+            f++;
+            
+        }
+        if(f+1==count)
+       printf("%d\n",i);
+      
+        
+    }
+    return 0;
+}
